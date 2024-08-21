@@ -11,7 +11,7 @@ using namespace sdf;
 
 static const int DEFAULT_NUM_THREADS = std::min(static_cast<int>(std::thread::hardware_concurrency()), 32);
 
-PYBIND11_MODULE(pysdf, m) {
+PYBIND11_MODULE(mesdf, m) {
     m.doc() =
         R"pbdoc(SDF: Convert triangle mesh to continuous signed distance function)pbdoc";
 

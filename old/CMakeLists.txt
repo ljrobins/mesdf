@@ -87,14 +87,14 @@ if (${meshview_FOUND} AND ${SDF_BUILD_DEMO})
 endif ()
 
 if (${pybind11_FOUND} AND ${SDF_BUILD_PYTHON})
-    pybind11_add_module(pysdf SHARED ${SDF_SOURCES} pybind.cpp)
-    set_target_properties(pysdf PROPERTIES OUTPUT_NAME pysdf)
+    pybind11_add_module(mesdf SHARED ${SDF_SOURCES} pybind.cpp)
+    set_target_properties(mesdf PROPERTIES OUTPUT_NAME mesdf)
     target_include_directories(
-        pysdf PUBLIC
+        mesdf PUBLIC
         $<BUILD_INTERFACE:${INCLUDE_DIR}>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
     )
-    target_link_libraries(pysdf PRIVATE ${DEPENDENCIES})
+    target_link_libraries(mesdf PRIVATE ${DEPENDENCIES})
 endif ()
 
 if (SDF_BUILD_INSTALL)

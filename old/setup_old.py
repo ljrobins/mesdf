@@ -21,7 +21,7 @@ class get_pybind_include(object):
 
 def find_eigen(min_ver=(3, 2, 0)):
     """Helper to find or download the Eigen C++ library"""
-    import re, os
+    import os
 
     try_paths = [
         "/usr/include/eigen3",
@@ -108,7 +108,7 @@ def find_eigen(min_ver=(3, 2, 0)):
 
 ext_modules = [
     Extension(
-        "pysdf",
+        "mesdf",
         # Sort input source files to ensure bit-for-bit reproducible builds
         # (https://github.com/pybind/python_example/pull/53)
         sorted(["src/sdf.cpp", "src/util.cpp", "src/renderer.cpp", "pybind.cpp"]),
@@ -197,7 +197,7 @@ class BuildExt(build_ext):
 
 
 setup(
-    name="pysdf",
+    name="mesdf",
     version=__version__,
     author="Alex Yu",
     author_email="alexyu99126@gmail.com",

@@ -8,11 +8,11 @@ All operations are CPU-only and parallelized.
 
 ## Quickstart
 
-**Install python binding**: `pip install pysdf`
+**Install python binding**: `pip install mesdf`
 
 ### Usage example:
 ```python
-from pysdf import SDF
+from mesdf import SDF
 
 # Load some mesh (don't necessarily need trimesh)
 import trimesh
@@ -97,7 +97,7 @@ The SDF computation will be slightly faster but may be *incorrect* if the mesh h
 
 ## Python
 See the quickstart section for a usage example.
-`help(pysdf)` will show more unimportant miscellaneous functions you may want to use (surface normal, area, etc.).
+`help(mesdf)` will show more unimportant miscellaneous functions you may want to use (surface normal, area, etc.).
 
 ### Copying
 By default, `SDF(verts, faces)` will copy the vertices/faces to ensure memory safety,

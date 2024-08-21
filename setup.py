@@ -2,7 +2,6 @@ from distutils.core import setup
 from pybind11.setup_helpers import Pybind11Extension
 import eigency
 import platform
-import os
 from glob import glob
 
 std_arg = "-std=c++17"
@@ -13,11 +12,16 @@ if platform.system() == "Windows":
 
 ext_modules = [
     Pybind11Extension(
-        name="pysdf",
+        name="mesdf",
         sources=["pybind.cpp", *glob("src/*.cpp")],
-        include_dirs=["src", "include/sdf", "include/sdf/internal", *tuple(eigency.get_includes())],
+        include_dirs=[
+            "src",
+            "include/sdf",
+            "include/sdf/internal",
+            *tuple(eigency.get_includes()),
+        ],
         extra_compile_args=[std_arg, opt_arg],
     ),
 ]
 
-setup(name="pysdf", ext_modules=ext_modules)
+setup(name="mesdf", ext_modules=ext_modules)

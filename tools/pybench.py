@@ -1,7 +1,8 @@
 import sys
 import numpy as np
 import trimesh
-from pysdf import SDF
+from mesdf import SDF
+import time
 
 teapot = trimesh.load(sys.argv[1], use_embree=(sys.argv[2] == "True"))
 teapot_sdf = SDF(np.array(teapot.vertices), np.array(teapot.faces))
@@ -12,7 +13,6 @@ print("SFD threads:", SDF.num_threads)
 
 NUM_POINTS = 1000
 rand_points = np.random.randn(NUM_POINTS, 3)
-import time
 
 start_time = time.time()
 cont = teapot_sdf.contains(rand_points)
