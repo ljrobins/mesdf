@@ -1,0 +1,17 @@
+[project]
+name = "pysdf"
+version = "0.1.9"
+description = "SDF: Convert triangle mesh to continuous signed distance function + some other mesh utilities"
+requires-python = ">=3.10"
+
+[[project.authors]]
+name = "Liam Robinson"
+email = "liamers127@gmail.com"
+
+[build-system]
+requires = [ "setuptools>=42", "wheel", "numpy>=1.19.2", "pybind11>=2.11.0", "eigency>=1.6.0", "setuptools-scm>=8.0",]
+build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+build = ["cp312-*", "cp311-*", "cp310-*"]
+skip = "pp* *-manylinux_i686 *musllinux* *_ppc64le *_s390x *win32* *-macosx_arm64 *-macosx_universal2:arm64"

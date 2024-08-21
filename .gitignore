@@ -1,0 +1,8 @@
+*.so
+.DS_Store
+*.egg*
+.venv
+eigen*
+build
+var
+__pycache__

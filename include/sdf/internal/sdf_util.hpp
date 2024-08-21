@@ -2,7 +2,7 @@
 #include <thread>
 #include <random>
 #include <Eigen/Core>
-#include "sdf/internal/nanoflann.hpp"
+#include "nanoflann.hpp"
 
 namespace sdf {
 

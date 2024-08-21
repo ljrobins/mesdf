@@ -1,4 +1,4 @@
-#include "sdf/internal/sdf_util.hpp"
+#include "sdf_util.hpp"
 #include <vector>
 #include <atomic>
 

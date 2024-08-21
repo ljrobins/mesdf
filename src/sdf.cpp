@@ -1,4 +1,4 @@
-#include "sdf/sdf.hpp"
+#include "sdf.hpp"
 
 #include <iostream>
 #include <iomanip>
@@ -8,8 +8,8 @@
 #include <random>
 #include <algorithm>
 #include <chrono>
-#include "sdf/internal/RTree.h"
-#include "sdf/internal/sdf_util.hpp"
+#include "RTree.h"
+#include "sdf_util.hpp"
 
 namespace sdf {
 
