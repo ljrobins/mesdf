@@ -111,7 +111,7 @@ ext_modules = [
         "mesdf",
         # Sort input source files to ensure bit-for-bit reproducible builds
         # (https://github.com/pybind/python_example/pull/53)
-        sorted(["src/sdf.cpp", "src/util.cpp", "src/renderer.cpp", "pybind.cpp"]),
+        sorted(["src/sdf.cpp", "src/util.cpp", "pybind.cpp"]),
         include_dirs=[
             "include",
             # Path to pybind11 headers

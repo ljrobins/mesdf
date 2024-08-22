@@ -1,6 +1,6 @@
 [project]
 name = "mesdf"
-version = "0.1.9"
+version = "0.1.10"
 description = "SDF: Convert triangle mesh to continuous signed distance function + some other mesh utilities"
 requires-python = ">=3.10"
 
