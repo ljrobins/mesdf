@@ -5,7 +5,9 @@ import platform
 from glob import glob
 
 opt_arg = "-O3"
+std_arg = "-std=c++17"
 if platform.system() == "Windows":
+    std_arg = "/std:c++17"
     opt_arg = "/O2"
 
 ext_modules = [
@@ -17,7 +19,7 @@ ext_modules = [
             "include/sdf/internal",
             *tuple(eigency.get_includes()),
         ],
-        extra_compile_args=[opt_arg],
+        extra_compile_args=[std_arg, opt_arg],
     ),
 ]
 
